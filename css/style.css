@@ -391,7 +391,8 @@ section, .footer{
 	padding: 5em 1em;
     height: 100vh;
     background-color: var(--clr-secondary);
-	min-height: 600px;
+    min-height: 600px;
+    max-height: 800px;
 }
 
 .textbox--intro{
@@ -660,6 +661,7 @@ section, .footer{
     text-transform: uppercase;
     font-size: 14px;
     background-color:  rgba(230, 230, 230, 0.51);
+    line-height: 2;
 }
 
 .footer__list__title{
@@ -680,7 +682,16 @@ section, .footer{
 }
 
 .footer .contact__address{
-    line-height: 1.35;
+    line-height: 1.6;
+}
+
+.footer__nav__link:hover{
+    color: #fe7865;
+}
+
+.footer .phone:hover,
+.footer .email:hover{
+    color: #fe7865;
 }
 
 
