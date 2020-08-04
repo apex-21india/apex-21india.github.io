@@ -385,7 +385,7 @@ section, .footer{
 /*----INTRO----*/
 
 .intro{
-    background-image: url('../images/intro.jpg');
+    background-image: url('../Images/intro.jpg');
     background-size: cover;
     background-position: center;
 	padding: 5em 1em;
