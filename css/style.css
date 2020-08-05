@@ -44,6 +44,18 @@ html{
     } 
 }
 
+
+@media only screen and (max-width: 328px){
+    :root{
+        --fs-1: 1rem;
+        --fs-2: 1.15rem;
+        --fs-3: 1.35rem;
+        --fs-4: 1.6rem;
+        --fs-5: 1.9rem;
+        --fs-small: 0.8rem;
+    }
+}
+
 body{
     font-family: var(--ff-primary);
     font-weight: 400;
@@ -293,16 +305,17 @@ section, .footer{
 
 .nav__item{
     display: block;
-    margin-bottom: .2em;
+    width: 100%;
 }
 
 .nav__link{
     display: inline-block;
-    padding: .5em 1em .5em 1em;
+    padding: .75em 1em .75em 1em;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #777;
+    width: 100%;
 }
 
 .dropdown-btn--clicked{
@@ -901,6 +914,7 @@ section, .footer{
     .nav__link{
         color: var(--clr-secondary);
         transition: color .2s ease;
+        font-size: 15px;
     }
 
     .nav__link:hover,
