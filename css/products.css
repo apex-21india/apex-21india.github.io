@@ -269,6 +269,18 @@
 		padding: 0 2em;
 	}
 
+    .section__title--product{
+        animation: fadeInUp 1.2s ease-out;
+    }
+
+    
+    .intro--product__body{
+        animation: fadeInUpLate 1.8s ease;
+    }
+
+    .btn--product{
+        animation: fadeInUpLater 2.2s ease;
+    }
     
 }
 
@@ -420,4 +432,54 @@
   }
   
 
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
 
+    40% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }  
+  
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  
+@keyframes fadeInUpLate {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+  
+    100%{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeInUpLater {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+  
+    100%{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
