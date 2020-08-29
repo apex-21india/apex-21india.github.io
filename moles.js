@@ -33,7 +33,7 @@ const game = {
     peep: function() {
         const game = this;
         const hole = this.randomHole();
-        const time = this.randomTime(250, 500);
+        const time = this.randomTime(220, 500);
 		if(time)
         hole.classList.add('up');
         setTimeout(function(){
