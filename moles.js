@@ -33,7 +33,8 @@ const game = {
     peep: function() {
         const game = this;
         const hole = this.randomHole();
-        const time = this.randomTime(200, 600);
+        const time = this.randomTime(250, 500);
+		if(time)
         hole.classList.add('up');
         setTimeout(function(){
             hole.classList.remove('up');
@@ -48,7 +49,7 @@ const game = {
         timeUp = false;
         setTimeout(function(){
             timeUp = true;            
-        }, 10000);
+        }, 15000);
         this.peep(); 
         // dont know why changin order of peep with setTimeout works
     },
