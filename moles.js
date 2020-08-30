@@ -1,6 +1,7 @@
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
+const startButton = document.querySelector('.start');
 
 let timeUp = false;
 
@@ -14,6 +15,8 @@ const game = {
     lastHole: 90,
 
     score: 0,
+	
+	running: false,
 
     randomTime: function (min, max) {
         return Math.round(Math.random() * (max - min) + min);
@@ -44,11 +47,14 @@ const game = {
     },
 
     start: function () {
+		const game = this;
         this.scoreBoard.textContent = 0;
         this.score = 0;
         timeUp = false;
+		this.running = true;
         setTimeout(function(){
-            timeUp = true;            
+            timeUp = true;  
+			game.running = false;
         }, 15000);
         this.peep(); 
         // dont know why changin order of peep with setTimeout works
@@ -72,6 +78,11 @@ var view = {
             const bonk = game.bonk.bind(game);
             mole.addEventListener('click', bonk);
         })
+		startButton.addEventListener('click', function () {
+			if(game.running)
+				return;
+			game.start();
+		})
     }
 }
 
