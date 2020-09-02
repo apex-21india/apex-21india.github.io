@@ -8,7 +8,7 @@
     --clr-back: lightblue;
     --clr-text: white;
 
-    --ff-1: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --ff-1: Impact, fantasy, Anton;
     --ff-2: Arial, sans-serif;
 
     --fs-1: 5rem;
@@ -17,7 +17,7 @@
     --fs-4: 1rem;
 }
 
-@media screen and (max-width: 324px){
+@media screen and (max-width: 350px){
 	:root{
 		--fs-1: 3rem;
 		--fs-2: 2rem;
@@ -104,7 +104,7 @@ h2{
 }
 
 .game-container{
-	font-size: var(--fs-2);
+	font-size: var(--fs-3);
 	padding-top: .5em;
 }
 
