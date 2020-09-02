@@ -135,6 +135,7 @@ em{
 .game-container{
 	font-size: var(--fs-3);
 	padding-top: .5em;
+	touch-action: manipulation;
 }
 
 .game-container__textbox{
