@@ -64,7 +64,7 @@ body{
     color: var(--clr-text);
     background-color: var(--clr-back);
     font-family: var(--ff-1);
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
 .screen{
