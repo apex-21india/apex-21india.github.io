@@ -47,11 +47,11 @@ function createInsect() {
 	const {x, y} = randomLocation();
 	insect.style.left = `${x}px`;
 	insect.style.top = `${y}px`;
-	const img = document.createElement('img');
-	img.setAttribute('src', selectedInsect.src);
-	img.setAttribute('alt', selectedInsect['alt']);
-	img.style.transform = `rotate(${Math.random() * 360}deg)`;
-	insect.appendChild(img);
+	let src = selectedInsect.src.toString();
+	src = src.replace('.png', '');
+	const alt = selectedInsect.alt;
+	const choice = Math.floor(Math.random() * 2);
+	insect.innerHTML = `<img src="${src}${choice ? choice : ''}.png" alt="${alt}" style="transform: rotate(${Math.random() * 360}deg)">`;
 	screens[2].appendChild(insect);
 	insect.addEventListener('click', catchInsect);
 }
@@ -71,7 +71,7 @@ function increaseScore(){
 function randomLocation() {
 	const width = window.innerWidth;
 	const height = window.innerHeight;
-	const x = Math.random() * (width - 50);
+	const x = Math.random() * (width - 100);
 	const y = Math.random() * (height - 170) + 100;
 	return {x, y};
 }
