@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch The Insect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="screen intro">
+      <div class="textbox">
+        <h1>Catch The Insect</h1>
+        <button class="start-button">Play Game</button>
+      </div>
+    </section>
+
+    <section class="screen choose-insects">
+     <div class="textbox">
+        <h2>Your favourite insect is...</h2>
+        <ul class="insects">
+            <li class="insectLi">
+                <button class="insect__button">
+                    <p>Fly</p>
+                    <img src="images/fly.png" alt="fly">
+                </button>
+            </li>
+            <li class="insectLi">
+                <button class="insect__button">
+                    <p>Mosquito</p>
+                    <img src="images/mosquito.png" =alt="mosquito">
+                </button>
+            </li>
+            <li class="insectLi">
+                <button class="insect__button">
+                    <p>Spider</p>
+                    <img src="images/spider.png" alt="spider">
+                </button>
+            </li>
+            <li class="insectLi">
+                <button class="insect__button">
+                    <p>Roach</p>
+                    <img src="images/roach.png" alt="roach">
+                </button>
+            </li>
+        </ul>
+    </div>
+    </section>
+
+    <section class="screen game-container">
+    <div class="textbox game-container__textbox">
+        <p class="time">00:00</p>
+        <p>Score: <span class="score">0</span></p>
+    </div>
+    </section>
+	
+	<script src="app.js"></script>
+</body>
+</html>

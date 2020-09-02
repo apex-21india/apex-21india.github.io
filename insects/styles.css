@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-back: lightblue;
+    --clr-text: white;
+
+    --ff-1: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --ff-2: Arial, sans-serif;
+
+    --fs-1: 5rem;
+    --fs-2: 3rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1rem;
+}
+
+@media screen and (max-width: 324px){
+	:root{
+		--fs-1: 3rem;
+		--fs-2: 2rem;
+		--fs-3: 1.2rem;
+		--fs-4: 1rem;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	:root{
+		--fs-1: 6.5rem;
+		--fs-2: 4rem;
+		--fs-3: 2rem;
+		--fs-4: 1.4rem;
+	}
+}
+
+body{
+    color: var(--clr-text);
+    background-color: var(--clr-back);
+    font-family: var(--ff-1);
+	overflow-y: hidden;
+}
+
+.screen{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+	transition: 1s ease;
+}
+
+.up{
+	margin-top: -100vh;
+}
+
+h1{
+    font-size: var(--fs-1);
+}
+
+
+h2{
+    font-size: var(--fs-2);
+}
+
+.insects{
+
+}
+
+.start-button{
+    display: inline-block;
+    outline: none;
+    border: none;
+    background-color: var(--clr-text);
+    color: lightskyblue;
+    padding: 10px 16px;
+    margin: 0 auto;
+	font-size: var(--fs-4);
+}
+
+.textbox{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.intro{
+	padding-top: 5rem;
+}
+
+.intro h1{
+	margin-bottom: .2em;
+	
+}
+
+.choose-insects{
+	justify-content: center;
+	text-align: center;
+	padding-top: 5rem;
+}
+
+.choose-insects h2{
+	margin-bottom: .5em;
+}
+
+.game-container{
+	font-size: var(--fs-2);
+	padding-top: .5em;
+}
+
+.game-container__textbox{
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	height: min-content;
+}
+
+.insects{
+	width: 300px;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.insects li{
+	flex: 1 1 150px;
+	display: inline-block;
+	display: flex;
+}
+
+.insect__button {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	font-family: var(--ff-1);
+	font-size: var(--fs-3);
+	width: 150px;
+	height: 150px;
+}
+
+.insect__button:hover {
+	background-color: #fff;
+	color: #516dff;
+}
+
+.insect__button:active {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.insect__button img {
+	object-fit: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.insect{
+	position: absolute;
+}
+
+.insect img{
+	object-fit: contain;
+	width: 40px;
+	height: 40px;
+}
+
+@media screen and (min-width: 700px){
+	.insect img{
+		object-fit: contain;
+		width: 100px;
+		height: 100px;
+	}
+	
+	.intro{
+		display: flex;
+		padding-top:8em;
+	}
+	
+	.intro .textbox{
+		width: 700px;
+		margin-left: 5em;
+	}
+	
+}
+
+
+@media screen and (max-width: 324px){	
+	.insects{
+		justify-content: center;
+	}
+	
+	.insects li{
+		height: 120px;
+		flex: 0;
+	}
+	
+	.insect__button{
+		width: 120px;
+		height: 120px;
+	}
+	
+	.insect__button img{
+		width: 80px;
+		height: 80px;
+		object-fit: contain;
+	}
+}
