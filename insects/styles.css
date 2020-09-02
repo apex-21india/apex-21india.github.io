@@ -7,6 +7,7 @@
 :root{
     --clr-back: lightblue;
     --clr-text: white;
+	--clr-game: lightblue;
 
     --ff-1: Impact, fantasy, sans-serif;
     --ff-2: Arial, sans-serif;
@@ -16,6 +17,23 @@
     --fs-3: 1.5rem;
     --fs-4: 1rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+	--clr-back: #212047;
+	--clr-text: #c5c3f8;
+	--clr-game: #000;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+		--clr-back: lightblue;
+		--clr-text: white;
+		--clr-black: #000;
+    }
+}
+
 
 @media screen and (max-width: 350px){
 	:root{
@@ -33,6 +51,13 @@
 		--fs-3: 2rem;
 		--fs-4: 1.4rem;
 	}
+}
+
+
+[data-theme="dark"] {
+	--clr-back: #212047;
+	--clr-text: #c5c3f8;
+	--clr-game: #000;
 }
 
 body{
@@ -64,8 +89,13 @@ h2{
     font-size: var(--fs-2);
 }
 
-.insects{
+.buttons{
+	display: flex;
+	justify-content: space-between;
+}
 
+em{
+	display: none;
 }
 
 .start-button{
@@ -73,9 +103,8 @@ h2{
     outline: none;
     border: none;
     background-color: var(--clr-text);
-    color: lightskyblue;
+    color: var(--clr-back);
     padding: 10px 16px;
-    margin: 0 auto;
 	font-size: var(--fs-4);
 }
 
@@ -165,6 +194,77 @@ h2{
 	height: 90px;
 }
 
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+   display: inline-block;
+   height: 34px;
+   position: relative;
+   width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px){
+	
+	.buttons{
+		justify-content: flex-start;
+	}
+	
+	.start-button{
+		margin-right: 4em;
+	}
+}
+
+
 @media screen and (min-width: 700px){
 	.insect img{
 		object-fit: contain;
@@ -181,9 +281,7 @@ h2{
 		width: 700px;
 		margin-left: 5em;
 	}
-	
 }
-
 
 @media screen and (max-width: 350px){	
 	.insects{
@@ -211,3 +309,4 @@ h2{
 		height: 85px;
 	}
 }
+

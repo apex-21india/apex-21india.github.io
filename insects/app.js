@@ -80,5 +80,16 @@ function startGame() {
 	setInterval(createInsect, 5000);
 }
 
+function toggleTheme (e) {
+   if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+		localStorage.setItem('theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+	    localStorage.setItem('theme', 'dark');
+	}    
+}
 
-
+const toggleThemeButton = document.querySelector('.theme-switch input[type="checkbox"]');
+toggleThemeButton.addEventListener('change', toggleTheme, false);
