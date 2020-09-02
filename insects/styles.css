@@ -8,7 +8,7 @@
     --clr-back: lightblue;
     --clr-text: white;
 
-    --ff-1: Impact, Anton, fantasy;
+    --ff-1: Impact, fantasy, sans-serif;
     --ff-2: Arial, sans-serif;
 
     --fs-1: 5rem;
@@ -161,8 +161,8 @@ h2{
 
 .insect img{
 	object-fit: contain;
-	width: 70px;
-	height: 70px;
+	width: 90px;
+	height: 90px;
 }
 
 @media screen and (min-width: 700px){
