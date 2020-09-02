@@ -141,8 +141,8 @@ h2{
 }
 
 .insect__button:hover {
-	background-color: #fff;
-	color: #516dff;
+	background-color: var(--clr-text);
+	color: var(--clr-back);
 }
 
 .insect__button:active {
