@@ -403,6 +403,7 @@ section, .footer{
     background-position: center;
 	padding: 5em 1em;
     height: 100vh;
+    background-color: var(--clr-secondary);
     min-height: 600px;
     max-height: 800px;
 }
