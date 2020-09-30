@@ -108,7 +108,7 @@ p{
     line-height: var(--line-height);
 }
 
-.icon--topbar{
+.icon--topbar, .icon--nav{
     display: inline-block;
     margin-right: .5em;
 	width: 20px;
@@ -116,6 +116,11 @@ p{
 	fill: var(--clr-white);
 	position: relative;
 	top: 5px;
+}
+
+.icon--nav{
+	fill: var(--clr-primary); 
+	margin-right: .1em;
 }
 
 .icon--phone{
@@ -394,6 +399,14 @@ section, .footer{
     position: relative;
 }
 
+.nav__contact{
+	padding: 1em;
+}
+
+.nav__contact__item{
+	font-weight: 500;
+}
+
 
 /*----INTRO----*/
 
@@ -475,6 +488,10 @@ section, .footer{
 .about__text{
     max-width: 600px;
     line-height: 1.7;
+}
+
+.about__para + .about__para{
+	margin-top: 1em;
 }
 
 .players{
@@ -854,6 +871,10 @@ section, .footer{
     .topbar__item + .topbar__item{
         margin-left: 4em;
     }
+	
+	.nav__contact{
+		display: none;
+	}
   
      
      .header{
